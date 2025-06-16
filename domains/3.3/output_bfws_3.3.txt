@@ -1,3 +1,48 @@
 Output bfws labyrinth size=3x3 rotations=3
 =================================================
- 
+  --- OK.
+ Match tree built with 3642 nodes.
+
+PDDL problem description loaded: 
+	Domain: LABYRINTH
+	Problem: LABYRINTH-SIZE-3-ROTATIONS-3-SEED-0
+	#Actions: 3642
+	#Fluents: 128
+Goals found: 1
+Goals_Edges found: 1
+Starting search with 1-BFWS...
+--[1 / 0]--
+--[1 / 4]--
+--[1 / 5]--
+--[1 / 6]--
+--[1 / 7]--
+--[1 / 8]--
+--[1 / 9]--
+--[1 / 10]--
+--[1 / 11]--
+--[1 / 12]--
+--[1 / 13]--
+--[1 / 14]--
+Total time: 0.001337
+Nodes generated during search: 334
+Nodes expanded during search: 332
+Plan found with cost: NOTFOUND
+Fast-BFS search completed in 0.001337 secs
+Starting search with BFWS(novel,land,h_(add)ff)...
+Landmarks found: 1
+Landmarks_Edges found: 1
+--[1 / 4294967295]--
+--[1 / 7]--
+--[1 / 6]--
+--[1 / 5]--
+--[1 / 4]--
+--[1 / 3]--
+--[1 / 2]--
+--[1 / 1]--
+--[1 / 0]--
+--[0 / 0]--
+Total time: 0.292895
+Nodes generated during search: 514
+Nodes expanded during search: 159
+Plan found with cost: 17
+BFS search completed in 0.292895 secs
