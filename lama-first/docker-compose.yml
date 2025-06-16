@@ -1,7 +1,5 @@
-version: '3.8'
-
 services:
-  lama:
+  lama-first:
     build:
       context: .
       dockerfile: Dockerfile
@@ -12,7 +10,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '1.0'
+          cpus: '2.0'
           memory: 8g
     volumes:
       - ../domains:/root/data
