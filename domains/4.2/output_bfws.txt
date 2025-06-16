@@ -1,2 +1,48 @@
 Output bfws labyrinth size=4x4 rotations=2
 =================================================
+ --- OK.
+ Match tree built with 21606 nodes.
+
+PDDL problem description loaded: 
+	Domain: LABYRINTH
+	Problem: LABYRINTH-SIZE-4-ROTATIONS-2-SEED-0
+	#Actions: 21606
+	#Fluents: 331
+Goals found: 1
+Goals_Edges found: 1
+Starting search with 1-BFWS...
+--[1 / 0]--
+--[1 / 4]--
+--[1 / 6]--
+--[1 / 7]--
+--[1 / 8]--
+--[1 / 9]--
+--[1 / 10]--
+--[1 / 12]--
+--[1 / 13]--
+--[1 / 14]--
+--[1 / 15]--
+--[1 / 16]--
+Total time: 0.00576401
+Nodes generated during search: 966
+Nodes expanded during search: 958
+Plan found with cost: NOTFOUND
+Fast-BFS search completed in 0.00576401 secs
+Starting search with BFWS(novel,land,h_(add)ff)...
+Landmarks found: 1
+Landmarks_Edges found: 1
+--[1 / 4294967295]--
+--[1 / 8]--
+--[1 / 7]--
+--[1 / 5]--
+--[1 / 4]--
+--[1 / 3]--
+--[1 / 2]--
+--[1 / 1]--
+--[1 / 0]--
+--[0 / 0]--
+Total time: 27.0583
+Nodes generated during search: 1316
+Nodes expanded during search: 273
+Plan found with cost: 13
+BFS search completed in 27.0583 secs
