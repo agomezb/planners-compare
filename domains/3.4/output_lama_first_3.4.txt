@@ -1,2 +1,166 @@
 Output lama-first labyrinth size=3x3 rotations=4
 =================================================
+INFO     planner time limit: 300s
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: 299s
+INFO     translator memory limit: None
+INFO     translator command line string: /usr/bin/python3 /workspace/downward/builds/release/bin/translate/translate.py /root/data/domain.pddl /root/data/3.4/problem.3.4.pddl --sas-file output.sas
+Parsing...
+Parsing: [0.010s CPU, 0.005s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.010s CPU, 0.009s wall-clock]
+Preparing model... [0.000s CPU, 0.002s wall-clock]
+Generated 224 rules.
+Computing model... [0.110s CPU, 0.113s wall-clock]
+7001 relevant atoms
+17011 auxiliary atoms
+24012 final queue length
+37525 total queue pushes
+Completing instantiation... [0.150s CPU, 0.148s wall-clock]
+Instantiating: [0.280s CPU, 0.279s wall-clock]
+Computing fact groups...
+Finding invariants...
+16 initial candidates
+Finding invariants: [0.000s CPU, 0.005s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+105 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.000s CPU, 0.006s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Translator axioms removed by simplifying: 0
+Processing axioms: [0.010s CPU, 0.009s wall-clock]
+Translating task: [1.140s CPU, 1.144s wall-clock]
+68040 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+2916 operators removed
+0 axioms removed
+1 propositions removed
+Detecting unreachable propositions: [0.920s CPU, 0.911s wall-clock]
+Reordering and filtering variables...
+106 of 106 variables necessary.
+0 of 1 mutex groups necessary.
+23994 of 23994 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.220s CPU, 0.226s wall-clock]
+Translator variables: 106
+Translator derived variables: 0
+Translator facts: 219
+Translator goal facts: 1
+Translator mutex groups: 0
+Translator total mutex groups size: 0
+Translator operators: 23994
+Translator axioms: 0
+Translator task size: 280796
+Translator peak memory: 105848 KB
+Writing output... [0.210s CPU, 0.220s wall-clock]
+Done! [2.810s CPU, 2.814s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: output.sas
+INFO     search time limit: 296s
+INFO     search memory limit: None
+INFO     search command line string: /workspace/downward/builds/release/bin/downward --search 'let(hlm,landmark_sum(lm_factory=lm_reasonable_orders_hps(lm_rhw()),transform=adapt_costs(one),pref=false),let(hff,ff(transform=adapt_costs(one)),lazy_greedy([hff,hlm],preferred=[hff,hlm],cost_type=one,reopen_closed=false)))' --internal-plan-file sas_plan < output.sas
+[t=0.012790s, 12120 KB] reading input...
+[t=0.132479s, 22292 KB] done reading input!
+[t=0.138556s, 22688 KB] Initializing landmark sum heuristic...
+[t=0.139559s, 22688 KB] Generating landmark graph...
+[t=0.141557s, 23220 KB] Building a landmark graph with reasonable orders.
+[t=0.142559s, 24020 KB] Initializing Exploration...
+[t=0.164573s, 36172 KB] Generating landmarks using the RPG/SAS+ approach
+[t=0.184583s, 36172 KB] Landmarks generation time: 0.043025s
+[t=0.184583s, 36172 KB] Discovered 3 landmarks, of which 0 are disjunctive and 0 are conjunctive.
+[t=0.184583s, 36172 KB] 2 edges
+[t=0.184583s, 36172 KB] approx. reasonable orders
+[t=0.185559s, 36172 KB] Landmarks generation time: 0.046000s
+[t=0.186556s, 36172 KB] Discovered 3 landmarks, of which 0 are disjunctive and 0 are conjunctive.
+[t=0.186556s, 36172 KB] 2 edges
+[t=0.186556s, 36172 KB] Landmark graph generation time: 0.046996s
+[t=0.186556s, 36172 KB] Landmark graph contains 3 landmarks, of which 0 are disjunctive and 0 are conjunctive.
+[t=0.186556s, 36172 KB] Landmark graph contains 2 orderings.
+[t=0.198557s, 36172 KB] Simplifying 121626 unary operators... done! [121626 unary operators]
+[t=0.437474s, 41608 KB] time to simplify: 0.238917s
+[t=0.440474s, 41608 KB] Initializing additive heuristic...
+[t=0.440474s, 41608 KB] Initializing FF heuristic...
+[t=0.440474s, 41608 KB] Building successor generator...done!
+[t=0.452473s, 41608 KB] peak memory difference for successor generator creation: 0 KB
+[t=0.452473s, 41608 KB] time for successor generation creation: 0.011998s
+[t=0.452473s, 41608 KB] Variables: 106
+[t=0.452473s, 41608 KB] FactPairs: 219
+[t=0.452473s, 41608 KB] Bytes per state: 16
+[t=0.452473s, 41608 KB] Conducting lazy best first search, (real) bound = 2147483647
+[t=0.454475s, 41608 KB] New best heuristic value for landmark_sum_heuristic: 1
+[t=0.454475s, 41608 KB] New best heuristic value for ff: 6
+[t=0.454475s, 41608 KB] g=0, 1 evaluated, 0 expanded
+[t=0.454475s, 41608 KB] Initial heuristic value for landmark_sum_heuristic: 1
+[t=0.454475s, 41608 KB] Initial heuristic value for ff: 6
+[t=0.461474s, 41608 KB] New best heuristic value for ff: 5
+[t=0.461474s, 41608 KB] g=2, 8 evaluated, 5 expanded
+[t=0.606477s, 41608 KB] New best heuristic value for ff: 4
+[t=0.606477s, 41608 KB] g=18, 145 evaluated, 115 expanded
+[t=0.608477s, 41608 KB] New best heuristic value for ff: 3
+[t=0.608477s, 41608 KB] g=19, 147 evaluated, 117 expanded
+[t=0.610478s, 41608 KB] New best heuristic value for ff: 2
+[t=0.610478s, 41608 KB] g=20, 149 evaluated, 119 expanded
+[t=0.611478s, 41608 KB] New best heuristic value for ff: 1
+[t=0.611478s, 41608 KB] g=21, 150 evaluated, 120 expanded
+[t=0.611478s, 41608 KB] Solution found!
+[t=0.611478s, 41608 KB] Actual search time: 0.159006s
+move-south card0 pos0 pos0 s card4 pos0 pos1 n (1)
+start-move-card-east card2 pos2 pos0 card1 pos1 (1)
+move-card-east card1 pos1 pos0 card0 pos0 pos2 (0)
+stop-move-card-east card0 pos0 pos0 pos1 card2 (0)
+start-move-card-east card1 pos2 pos0 card0 pos1 (1)
+move-card-east card0 pos1 pos0 card2 pos0 pos2 (0)
+stop-move-card-east card2 pos0 pos0 pos1 card1 (0)
+start-move-card-north card0 pos2 pos0 card7 pos1 (1)
+move-card-north card7 pos2 pos1 card8 pos2 pos0 (0)
+stop-move-card-north card8 pos2 pos2 pos1 card0 (0)
+move-north card4 pos0 pos1 n card1 pos0 pos0 s (1)
+move-east card1 pos0 pos0 e card2 pos1 pos0 w (1)
+move-south card2 pos1 pos0 s card3 pos1 pos1 n (1)
+start-move-card-east card7 pos2 pos0 card2 pos1 (1)
+move-card-east card2 pos1 pos0 card1 pos0 pos2 (0)
+stop-move-card-east card1 pos0 pos0 pos1 card7 (0)
+start-move-card-south card0 pos2 pos2 card8 pos1 (1)
+move-card-south card8 pos2 pos1 card2 pos0 pos2 (0)
+stop-move-card-south card2 pos2 pos0 pos1 card0 (0)
+move-east card3 pos1 pos1 e card2 pos2 pos1 w (1)
+move-south card2 pos2 pos1 s card8 pos2 pos2 n (1)
+leave card8 pos2 pos2 (0)
+[t=0.611478s, 41608 KB] Plan length: 22 step(s).
+[t=0.611478s, 41608 KB] Plan cost: 11
+[t=0.611478s, 41608 KB] Expanded 121 state(s).
+[t=0.611478s, 41608 KB] Reopened 0 state(s).
+[t=0.611478s, 41608 KB] Evaluated 151 state(s).
+[t=0.611478s, 41608 KB] Evaluations: 273
+[t=0.611478s, 41608 KB] Generated 470 state(s).
+[t=0.611478s, 41608 KB] Dead ends: 29 state(s).
+[t=0.611478s, 41608 KB] Number of registered states: 151
+[t=0.611478s, 41608 KB] Int hash set load factor: 151/256 = 0.589844
+[t=0.611478s, 41608 KB] Int hash set resizes: 8
+[t=0.611478s, 41608 KB] Search time: 0.159006s
+[t=0.611478s, 41608 KB] Total time: 0.611478s
+Solution found.
+Peak memory: 41608 KB
+Remove intermediate file output.sas
+search exit code: 0
+
+INFO     Planner time: 3.81s
