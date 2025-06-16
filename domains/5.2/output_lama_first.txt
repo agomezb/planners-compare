@@ -1,5 +1,6 @@
-Output labyrinth size=5x5 rotations=2
-=================================================INFO     planner time limit: None
+Output lama-first labyrinth size=5x5 rotations=2
+=================================================
+INFO     planner time limit: None
 INFO     planner memory limit: None
 
 INFO     Running translator.

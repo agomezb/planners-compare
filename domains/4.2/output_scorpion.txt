@@ -1,2 +1,2 @@
-Output lama-first labyrinth size=3x3 rotations=1
+Output scorpion labyrinth size=4x4 rotations=2
 =================================================
