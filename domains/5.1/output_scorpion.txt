@@ -1,2 +1,114 @@
 Output scorpion labyrinth size=5x5 rotations=1
 =================================================
+INFO     planner time limit: 600s
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: 599s
+INFO     translator memory limit: None
+INFO     translator command line string: /usr/bin/pypy3 /planner/builds/release/bin/translate/translate.py /root/data/domain.pddl /root/data/5.1/problem.5.1.pddl --sas-file output.sas
+Parsing...
+Parsing: [0.050s CPU, 0.039s wall-clock]
+Normalizing task... [0.000s CPU, 0.001s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.007s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.050s CPU, 0.053s wall-clock]
+Preparing model... [0.020s CPU, 0.018s wall-clock]
+Generated 224 rules.
+Computing model... [2.410s CPU, 2.407s wall-clock]
+163390 relevant atoms
+444373 auxiliary atoms
+607763 final queue length
+932108 total queue pushes
+Completing instantiation... [2.400s CPU, 2.401s wall-clock]
+Instantiating: [4.880s CPU, 4.887s wall-clock]
+Computing fact groups...
+Finding invariants...
+16 initial candidates
+Finding invariants: [0.060s CPU, 0.058s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+681 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.010s CPU, 0.007s wall-clock]
+Computing fact groups: [0.080s CPU, 0.076s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.002s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.004s wall-clock]
+Building mutex information...
+Building mutex information: [0.010s CPU, 0.001s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Translator axioms removed by simplifying: 0
+Computing negative axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.140s CPU, 0.146s wall-clock]
+Translating task: [68.200s CPU, 68.234s wall-clock]
+3700000 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+62500 operators removed
+0 axioms removed
+1 propositions removed
+Detecting unreachable propositions: [22.160s CPU, 22.171s wall-clock]
+Reordering and filtering variables...
+682 of 682 variables necessary.
+0 of 1 mutex groups necessary.
+1515615 of 1515615 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [15.080s CPU, 15.085s wall-clock]
+Translator variables: 682
+Translator derived variables: 0
+Translator facts: 1387
+Translator goal facts: 1
+Translator mutex groups: 0
+Translator total mutex groups size: 0
+Translator operators: 1515615
+Translator axioms: 0
+Translator task size: 17399745
+Translator peak memory: 4237200 KB
+Writing output... [11.910s CPU, 11.911s wall-clock]
+Done! [122.810s CPU, 122.857s wall-clock]
+translate exit code: 0
+
+INFO     Run preprocess (preprocess-h2).
+INFO     preprocess stdin: output.sas
+INFO     preprocess time limit: 476s
+INFO     preprocess memory limit: None
+INFO     preprocess command line string: /planner/builds/release/bin/preprocess-h2 --outfile preprocessed-output.sas < output.sas
+Building causal graph...
+The causal graph is not acyclic.
+682 variables of 682 necessary
+0 of 0 mutex groups necessary.
+1515615 of 1515615 operators necessary.
+0 of 0 axiom rules necessary.
+Initializing mutex computation...
+Mutex computation initialized with 1387 fluents.
+iteration for mutex detection and operator pruning
+Initialize m_index fw
+Initialized mvalues forward: reached=465124, notReached=1456683, spurious=1962
+Initialize m_ops fw
+Computing mutexes...
+Mutex computation finished with reached=1904115, notReached=17692, spurious=1962
+72530 operators are spurious because were not triggered
+H^2 mutexes added fw: 17692, unreachable: 0
+Mutexes detected: 17692
+Detecting unreachable fluents...
+Finished detecting unreachable fluents.
+Removing spurious operators...
+preprocess exit code: -24
+
+INFO     Running search (release).
+INFO     GDB call (needs --keep-sas-file): gdb -ex run -ex bt --args /planner/builds/release/bin/downward --search 'astar(scp_online([projections(sys_scp(max_time=100,max_time_per_restart=10)),cartesian()],saturator=perimstar,max_time=1000,interval=10K,orders=greedy_orders()),pruning=limited_pruning(pruning=atom_centric_stubborn_sets(),min_required_pruning_ratio=0.2))' < output.sas
+INFO     search stdin: output.sas
+INFO     search time limit: 0s
+INFO     search memory limit: None
+INFO     search command line string: /planner/builds/release/bin/downward --search 'astar(scp_online([projections(sys_scp(max_time=100,max_time_per_restart=10)),cartesian()],saturator=perimstar,max_time=1000,interval=10K,orders=greedy_orders()),pruning=limited_pruning(pruning=atom_centric_stubborn_sets(),min_required_pruning_ratio=0.2))' --internal-plan-file sas_plan < output.sas
+Remove intermediate file output.sas
+search exit code: -24
+
+Driver aborting after search
+INFO     Planner time: 600.28s
