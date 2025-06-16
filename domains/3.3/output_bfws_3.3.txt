@@ -1,0 +1,3 @@
+Output bfws labyrinth size=3x3 rotations=3
+=================================================
+ 
